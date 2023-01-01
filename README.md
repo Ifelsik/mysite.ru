@@ -2,7 +2,7 @@
  My WSGI app  
 Предварительно клонируется репозиторий с приложением  
 `
-git clone
+git clone https://github.com/Ifelsik/mysite.ru.git
 `  
 Для установки предварительно создаётся виртуальная среда  
 `
