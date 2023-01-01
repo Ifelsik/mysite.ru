@@ -7,7 +7,6 @@ from UserLogin import UserLogin
 
 # конфигурация
 DATABASE = f"{os.getcwd()}/data/mysite.db"
-DEBUG = True # Убрать при запуске
 SECRET_KEY = "2ff6cac84a3406ecd3087e5c0bb438ba"
 
 app = Flask(__name__)
