@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" href="{{ url_for('static', filename = 'css/register.css') }}" rel="stylesheet">
+        <title>Регистрация</title>
+    </head>
+    <body>
+        <a href="{{ url_for('main') }}">На главную</a>
+        <div class="form">
+            <h1 id="reg">Регистрация</h1>
+            <form method="post">
+                <ul class="list">
+                    <li>
+                        <div class="reg_title">Придумайте логин:</div>
+                        <input class="reg_input" type="text" name="login">
+                    </li>
+                    <li>
+                        <div class="reg_title">Укажите вашу почту:</div>
+                        <input class="reg_input" type="email" name="email">
+                    </li>
+                    <li>
+                        <div class="reg_title">Придумайте пароль:</div>
+                        <input class="reg_input" type="password" name="psw">
+                    </li>
+                    <li>
+                        <div class="reg_title">Подтвердите пароль:</div>
+                        <input class="reg_input" type="password" name="psw_control">
+                    </li>
+                <div id="btn_control">
+                <input class="reg_btn" type="submit" name="enter" value="Зарегистрироваться">
+                <input class="rst_btn" type="reset" name="reset" value="Очистить форму">
+                </div>
+                </ul>
+            </form>
+            <div id="reg_or_not">
+                Уже зарегистрированы?
+                <a class="inp_btn" href="{{ url_for('login') }}">Войти</a>
+            </div>
+        </div>
+        <div>
+            {% for category, msg in get_flashed_messages(with_categories=True) %}
+                <h3 class = "{{ category }}">{{ msg }}</h3>
+            {% endfor %}
+        </div>
+        <div>
+            {{ msg }}
+        </div>
+    </body>
+</html>

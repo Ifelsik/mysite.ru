@@ -1,0 +1,122 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Tahoma;
+    color: #444;
+}
+
+.form {
+    max-width: 30%;
+    margin: 5% auto;
+    background: #FFF;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px #AAA;
+
+}
+
+#log {
+    margin: 0 auto;
+    color: #03EAFC;
+    border-bottom: 1px solid #CCC;
+    font-size: 200%;
+    padding-bottom: 10px;
+}
+
+#reg {
+    margin: 0 auto;
+    color: #A2FF0C;
+    border-bottom: 1px solid #CCC;
+    font-size: 200%;
+    padding-bottom: 10px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li{
+    margin: 5% 0;
+}
+
+.reg_title {
+    min-width: 35%;
+    display: inline-block;
+}
+
+input.reg_input {
+    border: none;
+    border-bottom: 1px solid #AAA;
+    width: 50%
+}
+
+input.reg_input:focus {
+    color: #FFDB4D;
+    border-bottom: 1px solid #FFDB4A;
+}
+
+input.inp_btn {
+    float: left;
+    background-color: #3AE3FF;
+    border-radius: 10%;
+    border-color: #443ECF;
+    max-width: 30%
+}
+input.reg_btn {
+    float: left;
+    background-color: #22FF1B;
+    border-radius: 10%;
+    border-color: #16A612;
+    max-width: 40%
+}
+
+input.rst_btn {
+    float: right;
+    background-color: #FFC556;
+    border-radius: 10%;
+    border-color: #BD9240;
+    max-width: 35%
+}
+
+#btn_control {
+    overflow: hidden;
+    padding: 0 10% 5% 10%;
+}
+
+#reg_or_not {
+    border-top: 1px solid #CCC;
+    padding: 5% 5% 5% 5%;
+}
+
+a.inp_btn {
+    text-decoration: none ;
+    text-align: center;
+    float: right;
+    background-color: #3AE3FF;
+    border-radius: 10%;
+    border: 1px solid #443ECF;
+    min-width: 30%
+}
+
+a.inp_btn:hover {
+    background-color:#F2E33B;
+    border-color: #700B4A;
+    color: #F2F2F2;
+}
+
+a.reg_btn {
+    text-decoration: none;
+    text-align: center;
+    float: right;
+    background-color: #22FF1B;
+    border-radius: 10%;
+    border: 1px solid #16A612;
+    min-width: 30%
+}
+
+a.reg_btn:hover {
+    background-color:#F2E33B;
+    border-color: #700B4A;
+    color: #F2F2F2;
+}

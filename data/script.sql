@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS books (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    category TEXT NOT NULL,
+    author TEXT NOT NULL,
+    publisher TEXT NOT NULL,
+    year INTEGER NOT NULL,
+    pages INTEGER NOT NULL,
+    isbn TEXT NOT NULL,
+    description TEXT,
+    price INTEGER NOT NULL,
+    image BLOB
+);

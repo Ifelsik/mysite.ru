@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Страница не найдена</title>
+        <meta charset="utf-8">
+        <link type="text/css" href="{{ url_for('static', filename = 'css/page404.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="content">
+            <div>
+                <img class="image" src="{{ url_for('static', filename = 'images/NotFound.jpg') }}" alt="Image Not Found">
+            </div>
+            <div>
+                <h2>404. Запрашиваемая страница не найдена</h2>
+                <h2>
+                    <a href="{{ url_for('main') }}">Вернуться на главную</a>
+                </h2>
+            </div>
+        </div>
+    </body>
+</html>

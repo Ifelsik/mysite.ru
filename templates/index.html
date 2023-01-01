@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+<div class="menu">
+    <a class="selected" href="{{ url_for('main') }}">Главная</a>
+    <a href="{{ url_for('shop') }}">Магазин</a>
+    <div class="user">
+        <a id="login" href="{{ url_for('login') }}">Вход и Регистрация</a>
+        <a href="{{ url_for('cart')}}">Моя Корзина</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block card %}
+<div class="info">
+    <h2>Добро Пожаловать!</h2>
+    <br>
+        <p> 
+            Добро пожаловать на наш сайт!
+        </p>
+        <p>
+            Здесь вы можете выбрать книгу, которая бы оказалась вам по душе.
+        </p>
+</div>
+{% endblock %}

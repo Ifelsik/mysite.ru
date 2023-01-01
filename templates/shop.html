@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+<div class="menu">
+    <a href="{{ url_for('main') }}">Главная</a>
+    <a class="selected" href="{{ url_for('shop') }}">Магазин</a>
+    <div class="user">
+        <a id="login" href="{{ url_for('login') }}">Вход и Регистрация</a>
+        <a href="{{ url_for('cart')}}">Моя Корзина</a>
+    </div>
+</div>
+{% include 'book_card.html' %}
+{% endblock %}

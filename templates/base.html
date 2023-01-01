@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Добро Пожаловать на mysite.ru!</title>
+        <link type="text/css" href="{{ url_for('static', filename = 'css/base.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="page">
+                <div class="header">
+                    <h1>Книги</h1>
+                </div>
+                <div class="content">
+                    {% block menu %}
+                    {% endblock %}
+                    
+                    {% block card %}
+                    {% endblock %}
+
+                    {% block book_card %}
+                    {% endblock %}
+                </div>
+            </div>
+            <div class="footer">
+                <p>&copy; Все права защищены.
+                <p>&nbsp;
+                <p>2022 Черепнин Михаил ИУ4-13Б
+            </div>
+        </div>
+    </body>
+</html>
