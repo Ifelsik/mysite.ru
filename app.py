@@ -1,12 +1,13 @@
 import sqlite3
 import os
-from flask import Flask, render_template, request, g, url_for, flash, redirect
+from flask import Flask, render_template, request, g, url_for, flash, redirect, make_response
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 from UserLogin import UserLogin
 
 # конфигурация
 DATABASE = f"{os.getcwd()}/data/mysite.db"
+DEBUG = True
 SECRET_KEY = "2ff6cac84a3406ecd3087e5c0bb438ba"
 
 app = Flask(__name__)
@@ -214,6 +215,15 @@ def cart():
 def logout():
     logout_user()
     return redirect(url_for("main"))
+
+@app.route("/img/<int:img_id>")
+def render_image(img_id):
+    '''Выгрузка изображения из БД по id'''
+    db_resp = exe(f"SELECT image FROM books WHERE id = {img_id};")
+    image = db_resp[0][0]
+    resp = make_response(image)
+    resp.headers["Content-Type"] = "image/jpg"
+    return resp
     
 @app.errorhandler(404)
 def pageNotFound(error):
