@@ -16,16 +16,10 @@ source env/bin/activate
 ` 
 pip install -r requirements.txt
 `  
-Затем устанавливается переменная среды и запускается приложение  
+Затем устанавливается переменная окружения и запускается приложение  
 `
-export FLASK_APP=app.py  
+export FLASK_APP=app.py
 `  
-После устанавливаются необходимые модули   
 `
-pip install -r requirements.txt
-`  
-Затем устанавливается переменная среды и запускается приложение  
-`
-export FLASK_APP=app.py  
 flask run
 `  
