@@ -26,6 +26,8 @@ pip install -r requirements.txt
 `  
 Затем устанавливается переменная среды и запускается приложение  
 `
-export FLASK_APP=app.py  
+export FLASK_APP=app.py
+`  
+`
 flask run
 `  
